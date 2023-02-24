@@ -1,0 +1,208 @@
+/* googlefonts */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
+/* css variable */
+:root {
+  /* ### Primary */
+  --Lightred: hsl(0, 100%, 67%);
+  --OrangeyYellow: hsl(39, 100%, 56%);
+  --GreenTeal: hsl(166, 100%, 37%);
+  --CobaltBlue: hsl(234, 85%, 45%);
+
+  /* ## Gradients */
+  /* background */
+  --LightSlateBlue-Gradients: hsl(252, 100%, 67%);
+  --LightRoyalBlue-Gradients: hsl(241, 81%, 54%);
+  /* curcle */
+  --VioletBlue-curcle: hsla(256, 72%, 46%, 1);
+  --PersianBlue-curcle: hsla(241, 72%, 46%, 0);
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --PaleBlue: hsl(221, 100%, 96%);
+  --LightLavender: hsl(241, 100%, 89%);
+  --DarkGrayBlue: hsl(224, 30%, 27%);
+}
+/* css  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--PaleBlue);
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+.cards {
+  background-color: var(--White);
+  width: 650px;
+  border-radius: 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+}
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+}
+.left__container {
+  width: 50%;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  background: linear-gradient(
+    to bottom,
+    var(--LightSlateBlue-Gradients),
+    var(--LightRoyalBlue-Gradients)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+}
+.left__container .title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--LightLavender);
+}
+.left__container .circle {
+  /* width: 50%; */
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(
+    to bottom,
+    var(--VioletBlue-curcle),
+    var(--PersianBlue-curcle)
+  );
+  border-radius: 50%;
+  margin-left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+.left__container .circle h2 {
+  font-size: 3.5rem;
+  color: var(--White);
+}
+.left__container .circle small {
+  font-size: 1.1rem;
+  color: var(--LightLavender);
+}
+.description {
+  width: 85%;
+  text-align: center;
+}
+.description .desc__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--White);
+}
+.description p {
+  font-size: 1rem;
+  color: var(--LightLavender);
+}
+.right__container {
+  width: 50%;
+  padding: 1.5rem 2rem;
+}
+.right__container .title__right {
+  font-size: 1.8rem;
+  color: var(--DarkGrayBlue);
+}
+.right__container .card-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 0.7rem 0;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.right__container .card-title {
+  display: flex;
+  gap: 4px;
+  margin-left: 1rem;
+}
+/* color */
+.right__container .card_title {
+  color: var(--Lightred);
+}
+.right__container .card_memory {
+  color: var(--OrangeyYellow);
+}
+.right__container .card_verbal {
+  color: var(--GreenTeal);
+}
+.right__container .card_visual {
+  color: var(--CobaltBlue);
+}
+/* backround */
+.right__container .reaction {
+  background-color: #fff6f5;
+}
+.right__container .memory {
+  background-color: #fffbf2;
+}
+.right__container .verbal {
+  background-color: #f2fbfa;
+}
+.right__container .visual {
+  background-color: #f3f3fd;
+}
+.right__container .card-desc {
+  margin-right: 1rem;
+}
+.right__container button {
+  border: none;
+  width: 100%;
+  margin-top: 3.5rem;
+  text-align: center;
+  background-color: var(--DarkGrayBlue);
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  color: var(--White);
+  cursor: pointer;
+}
+.right__container button:hover {
+  background: var(--LightRoyalBlue-Gradients);
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    align-items: flex-start;
+  }
+  .cards {
+    width: 400px;
+  }
+  .cards-container {
+    flex-direction: column;
+  }
+  .left__container {
+    width: 100%;
+    gap: 0;
+    padding: 1rem;
+  }
+  .left__container .title {
+    margin-bottom: 12px;
+  }
+  .left__container .circle {
+    margin-bottom: 1rem;
+  }
+  .right__container {
+    width: 100%;
+    padding: 10px 1rem;
+  }
+  .right__container .title__right {
+    font-size: 1.5rem;
+  }
+  .right__container .card-content {
+    margin-top: 10px;
+  }
+  .right__container button {
+    margin-top: 1rem;
+  }
+}
